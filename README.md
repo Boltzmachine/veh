@@ -7,7 +7,7 @@
 
 
 # Installation
-**Prerequisite**: You need to have `Rust` and its toolchain (e.eg. `Cargo`) installed.
+**Prerequisite**: You need to have [Rust](https://www.rust-lang.org/tools/install) installed.
 
 To install **veh** for a user
 ```shell
@@ -33,4 +33,4 @@ which will give you the result:
 
 <img src=./assets/screenshot.png style="zoom: 20%" />
 
-Now you can drag the image by press the left button of your mouse. Middle wheel for zoom in or out.
+Now you can drag the image around by press the *left button* of your mouse. *Middle wheel* for zoom in or out.
