@@ -202,16 +202,14 @@ fn main() -> Result<()> {
                         }   
                     }
                     WindowEvent::CloseRequested => event_loop.exit(),
-
-                    // Resize the surface when the window is resized
                     WindowEvent::Resized(_size) => {
-                        // TODO: This is not implemented because resizing will change the initial layout (fit) if you are using a tiling window manager
-                        // render_cx.resize_surface(
-                        //     &mut render_state.surface,
-                        //     size.width,
-                        //     size.height,
-                        // );
-                        // render_state.window.request_redraw();
+                        let size = render_state.window.inner_size();
+                        render_cx.resize_surface(
+                            &mut render_state.surface,
+                            size.width,
+                            size.height,
+                        );
+                        render_state.window.request_redraw();
                     }
 
                     // This is where all the rendering happens
